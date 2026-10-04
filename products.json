@@ -1,36 +1,36 @@
 {
   "products": [
-  {
-    "name": "Cozy Ceramic Candle",
-    "category": "Home & Decor",
-    "price": "€12.99",
-    "image": "https://images.unsplash.com/photo-1603006905003-be475563bc59?auto=format&fit=crop&w=1000&q=85",
-    "link": "#",
-    "description": "A warm minimalist candle for a cozy corner."
-  },
-  {
-    "name": "Minimal Gold Earrings",
-    "category": "Jewellery",
-    "price": "€9.99",
-    "image": "https://images.unsplash.com/photo-1635767798638-3e25273a8236?auto=format&fit=crop&w=1000&q=85",
-    "link": "#",
-    "description": "Simple everyday jewellery with a clean aesthetic."
-  },
-  {
-    "name": "Soft Knit Cardigan",
-    "category": "Fashion",
-    "price": "€24.99",
-    "image": "https://images.unsplash.com/photo-1618354691373-d851c5c3c990?auto=format&fit=crop&w=1000&q=85",
-    "link": "#",
-    "description": "A soft neutral layer for effortless everyday outfits."
-  },
-  {
-    "name": "Cozy Desk Lamp",
-    "category": "Cozy Finds",
-    "price": "€19.99",
-    "image": "https://images.unsplash.com/photo-1507473885765-e6ed057f782c?auto=format&fit=crop&w=1000&q=85",
-    "link": "#",
-    "description": "Warm ambient lighting for a calm workspace."
-  }
+    {
+      "name": "Cozy Ceramic Candle",
+      "category": "Home & Decor",
+      "price": "€12.99",
+      "image": "https://images.unsplash.com/photo-1603006905003-be475563bc59?auto=format&fit=crop&w=1000&q=85",
+      "link": "https://example.com/",
+      "description": "A warm minimalist candle for a cozy corner."
+    },
+    {
+      "name": "Minimal Gold Earrings",
+      "category": "Jewellery",
+      "price": "€9.99",
+      "image": "https://images.unsplash.com/photo-1635767798638-3e25273a8236?auto=format&fit=crop&w=1000&q=85",
+      "link": "#",
+      "description": "Simple everyday jewellery with a clean aesthetic."
+    },
+    {
+      "name": "Soft Knit Cardigan",
+      "category": "Fashion",
+      "price": "€24.99",
+      "image": "https://images.unsplash.com/photo-1618354691373-d851c5c3c990?auto=format&fit=crop&w=1000&q=85",
+      "link": "#",
+      "description": "A soft neutral layer for effortless everyday outfits."
+    },
+    {
+      "name": "Cozy Desk Lamp",
+      "category": "Cozy Finds",
+      "price": "€19.99",
+      "image": "https://images.unsplash.com/photo-1507473885765-e6ed057f782c?auto=format&fit=crop&w=1000&q=85",
+      "link": "#",
+      "description": "Warm ambient lighting for a calm workspace."
+    }
   ]
 }
