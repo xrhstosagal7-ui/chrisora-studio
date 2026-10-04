@@ -1,6 +1,6 @@
 backend:
-  name: github
-  repo: xrhstosagal7-ui/chrisora-studio
+  name: turbo-github
+  turbo_site_id: 39869a1f-8212-4705-8ea1-59c0611a60c2
   branch: main
 
 media_folder: "assets"
@@ -22,18 +22,23 @@ collections:
               - label: "Name"
                 name: "name"
                 widget: "string"
+
               - label: "Category"
                 name: "category"
                 widget: "string"
+
               - label: "Price"
                 name: "price"
                 widget: "string"
+
               - label: "Description"
                 name: "description"
                 widget: "text"
+
               - label: "Image"
                 name: "image"
                 widget: "image"
+
               - label: "Affiliate Link"
                 name: "link"
                 widget: "string"
