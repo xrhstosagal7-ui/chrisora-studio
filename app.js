@@ -20,7 +20,7 @@ function applySettings(settings) {
 
   const aboutLabel = document.querySelector(".about .eyebrow");
   const aboutTitle = document.querySelector(".about h2");
-  const aboutText = document.querySelector(".about > div > p:not(.eyebrow)");
+  const aboutText = document.querySelector("#aboutText");
 
   const footer = document.querySelector("footer");
 
