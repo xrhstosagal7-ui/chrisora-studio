@@ -11,8 +11,17 @@ function applySettings(settings) {
   const heroSubtitle = document.querySelector(".hero .lead");
   const heroButton = document.querySelector(".hero .actions .button");
   const pinterestButton = document.querySelector("header .pill");
+
+  const exploreLabel = document.querySelector("#categories .eyebrow");
+  const exploreTitle = document.querySelector("#categories .section-head h2");
+
   const productsTitle = document.querySelector("#shop .section-head h2");
   const productsSubtitle = document.querySelector("#shop .section-head .lead");
+
+  const aboutLabel = document.querySelector(".about .eyebrow");
+  const aboutTitle = document.querySelector(".about h2");
+  const aboutText = document.querySelector(".about .lead");
+
   const footer = document.querySelector("footer");
 
   if (heroTitle && settings.heroTitle) {
@@ -43,12 +52,32 @@ function applySettings(settings) {
     }
   }
 
+  if (exploreLabel && settings.exploreLabel) {
+    exploreLabel.textContent = settings.exploreLabel;
+  }
+
+  if (exploreTitle && settings.exploreTitle) {
+    exploreTitle.textContent = settings.exploreTitle;
+  }
+
   if (productsTitle && settings.productsTitle) {
     productsTitle.textContent = settings.productsTitle;
   }
 
   if (productsSubtitle && settings.productsSubtitle) {
     productsSubtitle.textContent = settings.productsSubtitle;
+  }
+
+  if (aboutLabel && settings.aboutLabel) {
+    aboutLabel.textContent = settings.aboutLabel;
+  }
+
+  if (aboutTitle && settings.aboutTitle) {
+    aboutTitle.textContent = settings.aboutTitle;
+  }
+
+  if (aboutText && settings.aboutText) {
+    aboutText.textContent = settings.aboutText;
   }
 
   if (footer && settings.footerText) {
@@ -125,3 +154,12 @@ Promise.all([
   .catch(error => {
     console.error("Chrisora Studio error:", error);
   });
+
+const clearFilter = document.querySelector("#clearFilter");
+
+if (clearFilter) {
+  clearFilter.addEventListener("click", () => {
+    activeFilter = null;
+    render();
+  });
+}
