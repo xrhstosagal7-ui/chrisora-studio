@@ -1,0 +1,28 @@
+{
+  "categories": [
+    {
+      "name": "Home & Decor",
+      "number": "01"
+    },
+    {
+      "name": "Fashion",
+      "number": "02"
+    },
+    {
+      "name": "Jewellery",
+      "number": "03"
+    },
+    {
+      "name": "Beauty",
+      "number": "04"
+    },
+    {
+      "name": "Gifts",
+      "number": "05"
+    },
+    {
+      "name": "Cozy Finds",
+      "number": "06"
+    }
+  ]
+}
