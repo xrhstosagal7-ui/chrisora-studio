@@ -33,6 +33,18 @@ collections:
             name: "exploreTitle"
             widget: "string"
 
+          - label: "About Label"
+            name: "aboutLabel"
+            widget: "string"
+
+          - label: "About Title"
+            name: "aboutTitle"
+            widget: "string"
+
+          - label: "About Text"
+            name: "aboutText"
+            widget: "text"
+
           - label: "Hero Button Text"
             name: "heroButtonText"
             widget: "string"
