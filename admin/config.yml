@@ -23,6 +23,14 @@ collections:
           - label: "Hero Subtitle"
             name: "heroSubtitle"
             widget: "text"
+            
+            - label: "Explore Label"
+              name: "exploreLabel"
+              widget: "string"
+
+           - label: "Explore Title"
+              name: "exploreTitle"
+              widget: "string"
 
           - label: "Hero Button Text"
             name: "heroButtonText"
