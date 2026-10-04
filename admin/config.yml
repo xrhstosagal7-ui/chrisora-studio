@@ -87,42 +87,6 @@ collections:
               - label: "Affiliate Link"
                 name: "link"
                 widget: "string"
-                
-    - name: "products"
-    label: "Products"
-    files:
-      - label: "Products"
-        name: "products"
-        file: "products.json"
-        format: "json"
-        fields:
-          - label: "Products"
-            name: "products"
-            widget: "list"
-            fields:
-              - label: "Name"
-                name: "name"
-                widget: "string"
-
-              - label: "Category"
-                name: "category"
-                widget: "string"
-
-              - label: "Price"
-                name: "price"
-                widget: "string"
-
-              - label: "Description"
-                name: "description"
-                widget: "text"
-
-              - label: "Image"
-                name: "image"
-                widget: "image"
-
-              - label: "Affiliate Link"
-                name: "link"
-                widget: "string"
 
   - name: "categories"
     label: "Categories"
