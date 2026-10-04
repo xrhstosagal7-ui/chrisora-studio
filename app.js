@@ -1,6 +1,8 @@
-let allProducts = [], activeFilter = null;
+let allProducts = [];
+let activeFilter = null;
 
 const grid = document.querySelector("#products");
+const categoryGrid = document.querySelector(".category-grid");
 
 function applySettings(settings) {
   if (!settings) return;
@@ -25,6 +27,7 @@ function applySettings(settings) {
     if (settings.heroButtonText) {
       heroButton.textContent = settings.heroButtonText;
     }
+
     if (settings.heroButtonLink) {
       heroButton.href = settings.heroButtonLink;
     }
@@ -34,6 +37,7 @@ function applySettings(settings) {
     if (settings.pinterestButtonText) {
       pinterestButton.textContent = settings.pinterestButtonText;
     }
+
     if (settings.pinterestButtonLink) {
       pinterestButton.href = settings.pinterestButtonLink;
     }
@@ -60,21 +64,44 @@ function applySettings(settings) {
   }
 }
 
+function renderCategories(categories) {
+  if (!categoryGrid || !categories) return;
+
+  categoryGrid.innerHTML = categories.map(category => `
+    <button type="button" data-filter="${category.name}">
+      ${category.name}
+      <span>${category.number}</span>
+    </button>
+  `).join("");
+
+  categoryGrid.querySelectorAll("[data-filter]").forEach(button => {
+    button.addEventListener("click", () => {
+      activeFilter = button.dataset.filter;
+      render();
+    });
+  });
+}
+
 function render() {
+  if (!grid) return;
+
   const list = activeFilter
-    ? allProducts.filter(p => p.category === activeFilter)
+    ? allProducts.filter(product => product.category === activeFilter)
     : allProducts;
 
-  grid.innerHTML = list.map(p => `
+  grid.innerHTML = list.map(product => `
     <article class="product-card">
-      <img src="${p.image}" alt="${p.name}">
+      <img src="${product.image}" alt="${product.name}">
       <div class="product-info">
-        <p class="eyebrow">${p.category}</p>
-        <h3>${p.name}</h3>
-        <p>${p.description}</p>
+        <p class="eyebrow">${product.category}</p>
+        <h3>${product.name}</h3>
+        <p>${product.description}</p>
+
         <div class="product-bottom">
-          <span>${p.price}</span>
-          <a href="${p.link}" target="_blank" rel="noopener">View</a>
+          <span>${product.price}</span>
+          <a href="${product.link}" target="_blank" rel="noopener">
+            View
+          </a>
         </div>
       </div>
     </article>
@@ -82,30 +109,19 @@ function render() {
 }
 
 Promise.all([
-  fetch("products.json").then(r => r.json()),
-  fetch("site-settings.json").then(r => r.json())
+  fetch("products.json").then(response => response.json()),
+  fetch("site-settings.json").then(response => response.json()),
+  fetch("categories.json").then(response => response.json())
 ])
-.then(([productData, settings]) => {
-  allProducts = productData.products || [];
-  applySettings(settings);
-  render();
-})
-.catch(error => {
-  console.error("Chrisora Studio error:", error);
-});
+  .then(([productData, settings, categoryData]) => {
+    allProducts = productData.products || [];
 
-document.querySelectorAll("[data-filter]").forEach(button => {
-  button.addEventListener("click", () => {
-    activeFilter = button.dataset.filter;
+    applySettings(settings);
+
+    renderCategories(categoryData.categories || []);
+
     render();
+  })
+  .catch(error => {
+    console.error("Chrisora Studio error:", error);
   });
-});
-
-const clearFilter = document.querySelector("#clearFilter");
-
-if (clearFilter) {
-  clearFilter.addEventListener("click", () => {
-    activeFilter = null;
-    render();
-  });
-}
