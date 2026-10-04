@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Chrisora Studio — aesthetic finds for a softer everyday.">
+<title>Chrisora Studio — Aesthetic Finds</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="nav">
+  <a class="logo" href="#">Chrisora <span>Studio</span></a>
+  <nav>
+    <a href="#shop">Shop</a><a href="#categories">Categories</a><a href="#about">About</a>
+  </nav>
+  <a class="pill" href="https://www.pinterest.com/" target="_blank" rel="noopener">Pinterest ↗</a>
+</header>
+
+<main>
+<section class="hero">
+  <div class="hero-copy">
+    <p class="eyebrow">CURATED • COZY • MINIMAL</p>
+    <h1>Little things<br><em>worth finding.</em></h1>
+    <p class="lead">Aesthetic home pieces, fashion, jewellery, beauty and gifts — carefully curated for your everyday.</p>
+    <div class="actions"><a class="button" href="#shop">Explore finds</a><a class="text-link" href="#about">Our story ↓</a></div>
+  </div>
+  <div class="hero-art">
+    <div class="orb"></div><div class="card c1">soft<br><b>spaces</b></div>
+    <div class="card c2">everyday<br><b>details</b></div>
+    <div class="stamp">CS<br><small>studio</small></div>
+  </div>
+</section>
+
+<section id="categories" class="section">
+  <div class="section-head"><div><p class="eyebrow">EXPLORE</p><h2>Find your mood.</h2></div></div>
+  <div class="category-grid">
+    <button data-filter="Home & Decor">Home & Decor <span>01</span></button>
+    <button data-filter="Fashion">Fashion <span>02</span></button>
+    <button data-filter="Jewellery">Jewellery <span>03</span></button>
+    <button data-filter="Beauty">Beauty <span>04</span></button>
+    <button data-filter="Gifts">Gifts <span>05</span></button>
+    <button data-filter="Cozy Finds">Cozy Finds <span>06</span></button>
+  </div>
+</section>
+
+<section id="shop" class="section shop">
+  <div class="section-head"><div><p class="eyebrow">CURATED FINDS</p><h2>Current favorites.</h2></div><button id="clearFilter" class="clear">Show all</button></div>
+  <div id="products" class="products"></div>
+</section>
+
+<section id="about" class="about">
+  <div><p class="eyebrow">CHRISORA STUDIO</p><h2>A slower corner<br>of the internet.</h2></div>
+  <p>Chrisora Studio is a visual collection of beautiful, useful and cozy finds. Discover something you love, then follow the link to the original store.</p>
+</section>
+</main>
+
+<footer><div class="logo">Chrisora <span>Studio</span></div><p>Curated with intention.</p><small>© 2026 Chrisora Studio</small></footer>
+<script src="app.js"></script>
+</body>
+</html>
