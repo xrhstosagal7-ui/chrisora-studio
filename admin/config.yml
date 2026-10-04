@@ -7,6 +7,51 @@ media_folder: "assets"
 public_folder: "/assets"
 
 collections:
+
+  - name: "settings"
+    label: "Website Settings"
+    files:
+      - label: "Website Settings"
+        name: "settings"
+        file: "site-settings.json"
+        format: "json"
+        fields:
+          - label: "Hero Title"
+            name: "heroTitle"
+            widget: "string"
+
+          - label: "Hero Subtitle"
+            name: "heroSubtitle"
+            widget: "text"
+
+          - label: "Hero Button Text"
+            name: "heroButtonText"
+            widget: "string"
+
+          - label: "Hero Button Link"
+            name: "heroButtonLink"
+            widget: "string"
+
+          - label: "Pinterest Button Text"
+            name: "pinterestButtonText"
+            widget: "string"
+
+          - label: "Pinterest Button Link"
+            name: "pinterestButtonLink"
+            widget: "string"
+
+          - label: "Products Title"
+            name: "productsTitle"
+            widget: "string"
+
+          - label: "Products Subtitle"
+            name: "productsSubtitle"
+            widget: "text"
+
+          - label: "Footer Text"
+            name: "footerText"
+            widget: "string"
+
   - name: "products"
     label: "Products"
     files:
