@@ -1,16 +1,16 @@
 {
-  "heroTitle": "Little things worth finding.",
-  "heroSubtitle": "Curated finds for a cozy, beautiful life.",
-  "heroButtonText": "Explore finds",
-  "heroButtonLink": "#products",
-  "pinterestButtonText": "Follow on Pinterest",
-  "pinterestButtonLink": "#",
   "exploreLabel": "EXPLORE",
   "exploreTitle": "Find your mood.",
-  "productsTitle": "Curated Finds",
-  "productsSubtitle": "Things we think you'll love.",
+  "pinterestButtonLink": "#",
+  "heroButtonLink": "#products",
   "aboutLabel": "CHRISORA STUDIO",
+  "footerText": "© 2026 Chrisora Studio. All rights reserved.",
   "aboutTitle": "A visual collection of things worth discovering.",
-  "aboutText": "Thoughtfully curated finds for a cozy, beautiful life.",
-  "footerText": "© 2026 Chrisora Studio. All rights reserved."
+  "heroSubtitle": "Curated finds for a cozy, beautiful life.",
+  "productsTitle": "Curated Finds",
+  "pinterestButtonText": "Follow on Pinterest",
+  "heroButtonText": "Explore finds",
+  "aboutText": "TEST ABOUT TEXT",
+  "productsSubtitle": "Things we think you'll love.",
+  "heroTitle": "Little things worth finding."
 }
