@@ -11,6 +11,7 @@ function applySettings(settings) {
   const heroSubtitle = document.querySelector(".hero .lead");
   const heroButton = document.querySelector(".hero .actions .button");
   const pinterestButton = document.querySelector("header .pill");
+  const logoText = document.querySelector("header .logo");
 
   const exploreLabel = document.querySelector("#categories .eyebrow");
   const exploreTitle = document.querySelector("#categories .section-head h2");
@@ -49,6 +50,17 @@ function applySettings(settings) {
 
     if (settings.pinterestButtonLink) {
       pinterestButton.href = settings.pinterestButtonLink;
+    }
+  }
+
+  if (logoText && settings.logoText) {
+    const words = settings.logoText.trim().split(/\s+/);
+
+    if (words.length > 1) {
+      logoText.innerHTML =
+        `${words.slice(0, -1).join(" ")} <span>${words[words.length - 1]}</span>`;
+    } else {
+      logoText.textContent = settings.logoText;
     }
   }
 
